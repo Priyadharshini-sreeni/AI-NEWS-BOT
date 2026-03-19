@@ -1,0 +1,9 @@
+# Secret credentials - NEVER commit this
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
