@@ -1,0 +1,12 @@
+services:
+  - type: cron
+    name: gothenburg-news-bot
+    runtime: python
+    schedule: "0 6 * * *"  # Every day at 6:00 AM UTC = 7:00 AM Sweden time
+    buildCommand: pip install feedparser requests deep-translator
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false  # You will enter this manually in Render dashboard
+      - key: CHAT_ID
+        sync: false  # You will enter this manually in Render dashboard
